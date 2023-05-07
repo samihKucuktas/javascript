@@ -66,7 +66,7 @@ X = BOARD
 O = OPEN_HOLE
 FO = FILLED_HOLE
 
-F = FLOWER
+RF = RED_FLOWER
 
 
 R = RED
@@ -75,6 +75,8 @@ Y = YELLOW
 B = BLACK
 
 XN = XXXX_NUT
+XNN = XXXX_NO_NUT
+XF = XXXX_FLOWER
 */
 
 //render full board in html
@@ -91,16 +93,16 @@ function addBoard(id, pieceCode) {
     switch (pieceCode) {
         case 'X':
             oImg.setAttribute('src',
-                'https://cdn.discordapp.com/attachments/458953775525396480/1101892765270421595/image.png');
+                './pieces/X.png');
             break;
         case 'O':
-            oImg.setAttribute('src','https://cdn.discordapp.com/attachments/458953775525396480/1101901483521347686/image.png');
+            oImg.setAttribute('src','./pieces/O.png');
             break;
         case 'G':
-            oImg.setAttribute('src','https://cdn.discordapp.com/attachments/458953775525396480/1102398579684950156/G.png');
+            oImg.setAttribute('src','./pieces/G.png');
             break;
         case 'GN':
-            oImg.setAttribute('src','https://cdn.discordapp.com/attachments/458953775525396480/1102398560231755847/GN.png');
+            oImg.setAttribute('src','./pieces/GN.png');
             break;
     }
 
@@ -144,25 +146,25 @@ function refreshBoardImg() {
                 case 'X':
                     element.setAttribute(
                         'src',
-                        'https://cdn.discordapp.com/attachments/458953775525396480/1101892765270421595/image.png'
+                        './pieces/X.png'
                     );
                     break;
                 case 'O':
                     element.setAttribute(
                         'src',
-                        'https://cdn.discordapp.com/attachments/458953775525396480/1101901483521347686/image.png'
+                        './pieces/O.png'
                     );
                     break;
                 case 'G':
                     element.setAttribute(
                         'src',
-                        'https://cdn.discordapp.com/attachments/458953775525396480/1102398579684950156/G.png'
+                        './pieces/G.png'
                     );
                     break;
                 case 'GN':
                     element.setAttribute(
                         'src',
-                        'https://cdn.discordapp.com/attachments/458953775525396480/1102398560231755847/GN.png'
+                        './pieces/GN.png'
                     );
                     break;
             }
