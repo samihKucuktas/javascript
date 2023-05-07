@@ -1,0 +1,11 @@
+#board{
+    background-color: red;
+    width: 400px;
+    height: 400px;
+}
+
+#board img{
+    vertical-align: top;
+    height: 6.25rem;
+    width: 6.25rem;
+}
