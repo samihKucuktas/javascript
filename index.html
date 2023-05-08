@@ -9,8 +9,74 @@
     </head>
 
     <body>
-        <h1>Title</h1>
-        <div id="board"></div>
-    </body>
+        <section class="levels">
+            <h1>Levels:</h1>
+            <nav>
+                <ul class="starter">
+                        <li><a href="./link_naar_lvl1">Level 1</a></li>
+                        <li><a href="./link_naar_lvl2">Level 2</a></li>
+                        <li><a href="./link_naar_lvl3">Level 3</a></li>
+                </ul>
+                <ul class="junior" >
+                        <li><a href="./link_naar_lvl1">Level 1</a></li>
+                        <li><a href="./link_naar_lvl2">Level 2</a></li>
+                        <li><a href="./link_naar_lvl3">Level 3</a></li>
+                </ul>
+                <ul class="expert" >
+                        <li><a href="./link_naar_lvl1">Level 1</a></li>
+                        <li><a href="./link_naar_lvl2">Level 2</a></li>
+                        <li><a href="./link_naar_lvl3">Level 3</a></li>
+                </ul>
+                <ul class="master" >
+                        <li><a href="./link_naar_lvl1">Level 1</a></li>
+                        <li><a href="./link_naar_lvl2">Level 2</a></li>
+                        <li><a href="./link_naar_lvl3">Level 3</a></li>
+                </ul>
+                <ul class="wizard" >
+                        <li><a href="./link_naar_lvl1">Level 1</a></li>
+                        <li><a href="./link_naar_lvl2">Level 2</a></li>
+                        <li><a href="./link_naar_lvl3">Level 3</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="game">
 
+            <div class="boardborder4"><div class="boardborder3"><div class="boardborder2"><div class="boardborder1"><div id="board"></div></div></div> </div></div>
+
+            <div class="control">
+                <div class="timer">
+                    <h2 id="time_passed">Time: 34:16</h2>
+                    <button>
+                        <img src="https://cdn0.iconfinder.com/data/icons/glyphpack/41/refresh-512.png" alt="Reload" class="refresh">
+                        Restart
+                    </button>
+                </div>
+
+                <div class="arrowControl">
+                    <!--right is the default orientation of the arrow-->
+                    <button class="arrRight"><img src="https://w7.pngwing.com/pngs/551/108/png-transparent-arrow-illustration-arrow-icon-right-arrow-angle-web-design-internet-thumbnail.png" alt="arrow right"></button>
+                    <button class="arrUp"><img src="https://w7.pngwing.com/pngs/551/108/png-transparent-arrow-illustration-arrow-icon-right-arrow-angle-web-design-internet-thumbnail.png" alt="arrow up"></button>
+                    <button class="arrLeft"><img src="https://w7.pngwing.com/pngs/551/108/png-transparent-arrow-illustration-arrow-icon-right-arrow-angle-web-design-internet-thumbnail.png" alt="arrow left"></button>
+                    <button class="arrDown"><img src="https://w7.pngwing.com/pngs/551/108/png-transparent-arrow-illustration-arrow-icon-right-arrow-angle-web-design-internet-thumbnail.png" alt="arrow down"></button>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="border">
+            <span id="vertical_bar"></span>
+            <span id="horizonatal_bar"></span>
+            <div class="dificulty">
+                <h1 class="starter" >Starter</h1>
+                <h1 class="junior" hidden>Junior</h1>
+                <h1 class="expert" hidden>Expert</h1>
+                <h1 class="master" hidden>Master</h1>
+                <h1 class="wizard" hidden>Wizard</h1>
+            </div>
+        </section>
+        <footer>
+           <button class="rule_button">Rules</button>
+        </footer>
+    </body>
 </html>
