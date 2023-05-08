@@ -215,7 +215,7 @@ function lookForInput(i, j) {
                         if (boardWP[i][j] == 'GN') {
                             //YOOO if so is this still needed
 
-                            //move GN left
+                            //move GN right
                             boardWP[i][j + 1] = boardWP[i][j];
                             boardWP[i][j] = board[i][j];
 

@@ -36,7 +36,6 @@ nav ul div{
 /*    height: 43px;*/
 /*}*/
 .arrUp{
-    rotate: -90deg;
     position: absolute;
     right: 5rem;
     top: -5rem;
@@ -47,13 +46,11 @@ nav ul div{
     top: 0;
 }
 .arrDown{
-    rotate: 90deg;
     position: absolute;
     right: 5rem;
     top: 5rem;
 }
 .arrLeft{
-    rotate: 180deg;
     position: absolute;
     right: 10rem;
     top: 0;
