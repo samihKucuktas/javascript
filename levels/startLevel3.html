@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Slide Puzzle</title>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="../style.css">
 <!--        <script defer src="./script.js"></script>-->
-        <script defer src="./script.js"></script>
+        <script defer src=""></script>
     </head>
 
     <body>
@@ -14,7 +14,7 @@
             <h1>Levels:</h1>
             <nav>
                 <ul class="starter">
-                        <li><a href="./index.html">Level 1</a></li>
+                        <li><a href="../index.html">Level 1</a></li>
                         <li><a href="./startLevel2.html">Level 2</a></li>
                         <li><a href="./startLevel3.html">Level 3</a></li>
                 </ul>
@@ -55,10 +55,10 @@
 
                 <div class="arrowControl">
                     <!--right is the default orientation of the arrow-->
-                    <button class="arrRight" id="arrRightid"><img src="./arrows/right.png" alt="arrow right"></button>
-                    <button class="arrUp" id="arrUpid"><img src="./arrows/up.png" alt="arrow up"></button>
-                    <button class="arrLeft" id="arrLeftid"><img src="./arrows/left.png" alt="arrow left"></button>
-                    <button class="arrDown" id="arrDownid"><img src="./arrows/down.png" alt="arrow down"></button>
+                    <button class="arrRight" id="arrRightid"><img src="../arrows/right.png" alt="arrow right"></button>
+                    <button class="arrUp" id="arrUpid"><img src="../arrows/up.png" alt="arrow up"></button>
+                    <button class="arrLeft" id="arrLeftid"><img src="../arrows/left.png" alt="arrow left"></button>
+                    <button class="arrDown" id="arrDownid"><img src="../arrows/down.png" alt="arrow down"></button>
                 </div>
             </div>
 
@@ -80,4 +80,63 @@
            <button class="rule_button">Rules</button>
         </footer>
     </body>
+    <script>
+        //Ik heb momenteel even het bord hier geplaatst omdat ik nog niet heb gevonden hoe je de verschillende borden in het script zou kunnen steken.
+        let board = [
+            ['X', 'O', 'X', 'X'],
+            ['O', 'X', 'X', 'X'],
+            ['X', 'O', 'X', 'X'],
+            ['X', 'X', 'X', 'O'],
+            ];
+        let boardWP = [
+            ['BR', 'BNR', 'RF', 'X'],
+            ['BFU', 'X', 'X', 'X'],
+            ['X', 'O', 'X', 'X'],
+            ['RLN', 'RL', 'X', 'O'],
+            ];
+
+        for (let i = 0; i < boardWP.length; i++) {
+            for (let j = 0; j < boardWP[i].length; j++) {
+            addBoard('B' + i + '-' + j, boardWP[i][j]);
+                }
+            }
+
+        //adds a img to HTML with link
+        function addBoard(id, pieceCode) {
+            var oImg = document.createElement('img');
+
+                switch (pieceCode) {
+                    case 'X':
+                        oImg.setAttribute('src',
+                            '../pieces/X.png');
+                        break;
+                    case 'O':
+                        oImg.setAttribute('src','../pieces/O.png');
+                        break;
+                    case 'BFU':
+                        oImg.setAttribute('src','../pieces/BFU.png');
+                        break;
+                    case 'BR':
+                        oImg.setAttribute('src','../pieces/BR.png');
+                        break;
+                    case 'RF':
+                        oImg.setAttribute('src','../pieces/RF.png');
+                        break;
+                    case 'RLN':
+                        oImg.setAttribute('src','../pieces/RLN.png');
+                        break;
+                    case 'RL':
+                        oImg.setAttribute('src','../pieces/RL.png');
+                        break;
+                    case 'BNR':
+                        oImg.setAttribute('src','../pieces/BNR.png');
+                        break;
+                }
+
+    //each image gets appropriate id using coordinates in 2d array
+    oImg.setAttribute('id', id);
+
+    document.getElementById('board').appendChild(oImg);
+}
+    </script>
 </html>

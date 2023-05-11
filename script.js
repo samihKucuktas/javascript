@@ -47,11 +47,12 @@ let board = [
     ['X', 'X', 'X', 'O'],
 ];
 
+
 //board With Pieces
 let boardWP = [
-    ['X', 'O', 'X', 'X'],
-    ['O', 'X', 'X', 'X'],
-    ['X', 'O', 'GN', 'X'],
+    ['X', 'X', 'O', 'X'],
+    ['O', 'RLN', 'RL', 'X'],
+    ['X', 'RF', 'GN', 'X'],
     ['X', 'X', 'G', 'O'],
 ];
 
@@ -103,6 +104,15 @@ function addBoard(id, pieceCode) {
             break;
         case 'GN':
             oImg.setAttribute('src','./pieces/GN.png');
+            break;
+        case 'RF':
+            oImg.setAttribute('src','./pieces/RF.png');
+            break;
+        case 'RLN':
+            oImg.setAttribute('src','./pieces/RLN.png');
+            break;
+        case 'RL':
+            oImg.setAttribute('src','./pieces/RL.png');
             break;
     }
 
