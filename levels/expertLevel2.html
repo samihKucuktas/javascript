@@ -17,22 +17,22 @@
                     <li><a href="../index.html">Level 1</a></li>
                     <li><a href="./startLevel2.html">Level 2</a></li>
                     <li><a href="./startLevel3.html">Level 3</a></li>
-                </ul>
-                <ul class="junior" >
-                        <li><a href="./juniorLevel1.html">Level 1</a></li>
-                        <li><a href="./juniorLevel2.html">Level 2</a></li>
-                        <li><a href="./juniorLevel3.html">Level 3</a></li>
-                </ul>
-                <ul class="expert" >
-                        <li><a href="./expertLevel1.html">Level 1</a></li>
-                        <li><a href="./expertLevel2.html">Level 2</a></li>
-                        <li><a href="./expertLevel3.html">Level 3</a></li>
-                </ul>
-                <ul class="master" >
-                        <li><a href="./masterLevel1.html">Level 1</a></li>
-                        <li><a href="./masterLevel2.html">Level 2</a></li>
-                        <li><a href="./masterLevel3.html">Level 3</a></li>
-                </ul>
+            </ul>
+            <ul class="junior" >
+                    <li><a href="./juniorLevel1.html">Level 1</a></li>
+                    <li><a href="./juniorLevel2.html">Level 2</a></li>
+                    <li><a href="./juniorLevel3.html">Level 3</a></li>
+            </ul>
+            <ul class="expert" >
+                    <li><a href="./expertLevel1.html">Level 1</a></li>
+                    <li><a href="./expertLevel2.html">Level 2</a></li>
+                    <li><a href="./expertLevel3.html">Level 3</a></li>
+            </ul>
+            <ul class="master" >
+                    <li><a href="./masterLevel1.html">Level 1</a></li>
+                    <li><a href="./masterLevel2.html">Level 2</a></li>
+                    <li><a href="./masterLevel3.html">Level 3</a></li>
+            </ul>
                 <ul class="wizard" >
                         <li><a href="./link_naar_lvl1">Level 1</a></li>
                         <li><a href="./link_naar_lvl2">Level 2</a></li>
@@ -89,10 +89,10 @@
             ['X', 'X', 'X', 'O'],
             ];
         let boardWP = [
-            ['X', 'GN', 'O', 'X'],
-            ['RF', 'G', 'YFN', 'X'],
-            ['X', 'O', 'YLN', 'YL'],
-            ['X', 'X', 'X', 'O'],
+            ['X', 'X', 'O', 'X'],
+            ['X', 'X', 'X', 'YD'],
+            ['RN', 'GD', 'YFR', 'YND'],
+            ['R', 'GND', 'X', 'RF'],
             ];
 
         for (let i = 0; i < boardWP.length; i++) {
@@ -113,24 +113,31 @@
                     case 'O':
                         oImg.setAttribute('src','../pieces/O.png');
                         break;
-                    case 'G':
-                        oImg.setAttribute('src','../pieces/G.png');
+                    case 'R':
+                        oImg.setAttribute('src','../pieces/R.png');
                         break;
-                    case 'GN':
-                        oImg.setAttribute('src','../pieces/GN.png');
+                    case 'RN':
+                        oImg.setAttribute('src','../pieces/RN.png');
                         break;
                     case 'RF':
                         oImg.setAttribute('src','../pieces/RF.png');
                         break;
-                    case 'YLN':
-                        oImg.setAttribute('src','../pieces/YLN.png');
+                    case 'YND':
+                        oImg.setAttribute('src','../pieces/YND.png');
                         break;
-                    case 'YFN':
-                        oImg.setAttribute('src','../pieces/YFN.png');
+                    case 'YFR':
+                        oImg.setAttribute('src','../pieces/YFR.png');
                         break;
-                    case 'YL':
-                        oImg.setAttribute('src','../pieces/YL.png');
+                    case 'YD':
+                        oImg.setAttribute('src','../pieces/YD.png');
                         break;
+                    case 'GD':
+                        oImg.setAttribute('src','../pieces/GD.png');
+                        break;
+                    case 'GND':
+                        oImg.setAttribute('src','../pieces/GND.png');
+                        break;
+                    
                 }
 
     //each image gets appropriate id using coordinates in 2d array

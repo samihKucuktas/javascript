@@ -14,24 +14,24 @@
             <h1>Levels:</h1>
             <nav>
                 <ul class="starter">
-                        <li><a href="../index.html">Level 1</a></li>
-                        <li><a href="./startLevel2.html">Level 2</a></li>
-                        <li><a href="./startLevel3.html">Level 3</a></li>
+                    <li><a href="../index.html">Level 1</a></li>
+                    <li><a href="./startLevel2.html">Level 2</a></li>
+                    <li><a href="./startLevel3.html">Level 3</a></li>
                 </ul>
                 <ul class="junior" >
-                        <li><a href="./mediumLevel1.html">Level 1</a></li>
-                        <li><a href="./mediumLevel2.html">Level 2</a></li>
-                        <li><a href="./mediumLevel3.html">Level 3</a></li>
+                        <li><a href="./juniorLevel1.html">Level 1</a></li>
+                        <li><a href="./juniorLevel2.html">Level 2</a></li>
+                        <li><a href="./juniorLevel3.html">Level 3</a></li>
                 </ul>
                 <ul class="expert" >
-                        <li><a href="./link_naar_lvl1">Level 1</a></li>
-                        <li><a href="./link_naar_lvl2">Level 2</a></li>
-                        <li><a href="./link_naar_lvl3">Level 3</a></li>
+                        <li><a href="./expertLevel1.html">Level 1</a></li>
+                        <li><a href="./expertLevel2.html">Level 2</a></li>
+                        <li><a href="./expertLevel3.html">Level 3</a></li>
                 </ul>
                 <ul class="master" >
-                        <li><a href="./link_naar_lvl1">Level 1</a></li>
-                        <li><a href="./link_naar_lvl2">Level 2</a></li>
-                        <li><a href="./link_naar_lvl3">Level 3</a></li>
+                        <li><a href="./masterLevel1.html">Level 1</a></li>
+                        <li><a href="./masterLevel2.html">Level 2</a></li>
+                        <li><a href="./masterLevel3.html">Level 3</a></li>
                 </ul>
                 <ul class="wizard" >
                         <li><a href="./link_naar_lvl1">Level 1</a></li>
@@ -89,10 +89,10 @@
             ['X', 'X', 'X', 'O'],
             ];
         let boardWP = [
-            ['X', 'YFN', 'RF', 'X'],
-            ['O', 'YLN', 'YL', 'X'],
-            ['X', 'O', 'BN', 'X'],
-            ['RR', 'RNR', 'B', 'BF'],
+            ['X', 'X', 'RF', 'X'],
+            ['O', 'X', 'X', 'X'],
+            ['X', 'YD', 'GN', 'X'],
+            ['YFR', 'YND', 'G', 'O'],
             ];
 
         for (let i = 0; i < boardWP.length; i++) {
@@ -113,32 +113,23 @@
                     case 'O':
                         oImg.setAttribute('src','../pieces/O.png');
                         break;
-                    case 'B':
-                        oImg.setAttribute('src','../pieces/B.png');
+                    case 'G':
+                        oImg.setAttribute('src','../pieces/G.png');
                         break;
-                    case 'BF':
-                        oImg.setAttribute('src','../pieces/BF.png');
-                        break;
-                    case 'BN':
-                        oImg.setAttribute('src','../pieces/BN.png');
+                    case 'GN':
+                        oImg.setAttribute('src','../pieces/GN.png');
                         break;
                     case 'RF':
                         oImg.setAttribute('src','../pieces/RF.png');
                         break;
-                    case 'YLN':
-                        oImg.setAttribute('src','../pieces/YLN.png');
+                    case 'YND':
+                        oImg.setAttribute('src','../pieces/YND.png');
                         break;
-                    case 'YFN':
-                        oImg.setAttribute('src','../pieces/YFN.png');
+                    case 'YFR':
+                        oImg.setAttribute('src','../pieces/YFR.png');
                         break;
-                    case 'YL':
-                        oImg.setAttribute('src','../pieces/YL.png');
-                        break;
-                    case 'RR':
-                        oImg.setAttribute('src','../pieces/RR.png');
-                        break;
-                    case 'RNR':
-                        oImg.setAttribute('src','../pieces/RNR.png');
+                    case 'YD':
+                        oImg.setAttribute('src','../pieces/YD.png');
                         break;
                 }
 
