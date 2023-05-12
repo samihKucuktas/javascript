@@ -24,7 +24,7 @@ for (let i = 0; i < items.length; i++) {
 
 /*
 //EXAMPLE of creating a new img object in the HTML code
-var oImg = document.createElement("img");
+let oImg = document.createElement("img");
 oImg.setAttribute('src', 'https://cdn.discordapp.com/attachments/458953775525396480/1101892765270421595/image.png');
 oImg.setAttribute('height', '100px');
 oImg.setAttribute('width', '100px');
@@ -47,12 +47,11 @@ let board = [
     ['X', 'X', 'X', 'O'],
 ];
 
-
 //board With Pieces
 let boardWP = [
-    ['X', 'X', 'O', 'X'],
-    ['O', 'RLN', 'RL', 'X'],
-    ['X', 'RF', 'GN', 'X'],
+    ['X', 'O', 'X', 'X'],
+    ['O', 'X', 'X', 'X'],
+    ['X', 'O', 'GN', 'X'],
     ['X', 'X', 'G', 'O'],
 ];
 
@@ -89,7 +88,7 @@ for (let i = 0; i < boardWP.length; i++) {
 
 //adds a img to HTML with link
 function addBoard(id, pieceCode) {
-    var oImg = document.createElement('img');
+    let oImg = document.createElement('img');
 
     switch (pieceCode) {
         case 'X':
@@ -105,15 +104,6 @@ function addBoard(id, pieceCode) {
         case 'GN':
             oImg.setAttribute('src','./pieces/GN.png');
             break;
-        case 'RF':
-            oImg.setAttribute('src','./pieces/RF.png');
-            break;
-        case 'RLN':
-            oImg.setAttribute('src','./pieces/RLN.png');
-            break;
-        case 'RL':
-            oImg.setAttribute('src','./pieces/RL.png');
-            break;
     }
 
     //each image gets appropriate id using coordinates in 2d array
@@ -122,28 +112,189 @@ function addBoard(id, pieceCode) {
     document.getElementById('board').appendChild(oImg);
 }
 
-//initial loop of all the img of the board and adds click and keypress event listeners
+//current selection
+let currentClicked;
+let currentMove;
+
+
+
+document.getElementById('arrRightid').addEventListener('click', function () {
+    console.log('right arrow');
+    currentMove = 'right';
+    Movement();
+});
+document.getElementById('arrUpid').addEventListener('click', function () {
+    console.log('up arrow');
+    currentMove = 'up';
+    Movement();
+});
+document.getElementById('arrLeftid').addEventListener('click', function () {
+    console.log('left arrow');
+    currentMove = 'left';
+    Movement();
+});
+document.getElementById('arrDownid').addEventListener('click', function () {
+    console.log('down arrow');
+    currentMove = 'down';
+    Movement();
+});
+
+
+
+document.addEventListener('keydown', function (event) {
+    if (event.keyCode === 37) {
+        console.log('left key');
+        currentMove = 'left';
+        Movement();
+    } else if (event.keyCode === 38) {
+        console.log('up key');
+        currentMove = 'up';
+        Movement();
+    } else if (event.keyCode === 39) {
+        console.log('right key');
+        currentMove = 'right';
+        Movement();
+    } else if (event.keyCode === 40) {
+        console.log('down arrow');
+        currentMove = 'down';
+        Movement();
+    }
+});
+
+
+
+//initial loop of all the img of the board and adds click event listeners
 for (let i = 0; i < boardWP.length; i++) {
     for (let j = 0; j < boardWP[i].length; j++) {
-        lookForInput(i, j);
+        document.querySelector('#B' + i + '-' + j).addEventListener('click', function () {
+            console.log('clicked' + ' ' + i + '-' + j);
+            currentClicked = i.toString() + j.toString();
+            console.log('currentClicked: ' + currentClicked)
+        });
     }
 }
 
-//refreshes board by removing all img elements and adding them back with the right src link
-function refreshBoard() {
-    for (let i = 0; i < boardWP.length; i++) {
-        for (let j = 0; j < boardWP[i].length; j++) {
-            //remove current img
-            const element = document.querySelector('#B' + i + '-' + j);
-            element.remove();
 
-            //add updated current img
-            addBoard('B' + i + '-' + j, boardWP[i][j]);
+function Movement() {
+    let i = currentClicked.charAt(0);
+    let j = currentClicked.charAt(1);
 
-            lookForInput(i, j);
-        }
+    let pieceCode = boardWP[i][j];
+    console.log('currentClicked.charAt(0): ' + currentClicked.charAt(0));
+    console.log('currentClicked.charAt(1): ' + currentClicked.charAt(1));
+    console.log('pieceCode: ' + pieceCode);
+
+    switch (pieceCode) {
+        case 'X':
+            console.log("do nothing");
+            break;
+        case 'O':
+            console.log("do nothing");
+            break;
+        case 'G':
+
+            break;
+        case 'GN':
+            console.log('movement GN');
+            moveGN();
+            break;
     }
 }
+
+
+function moveGN() {
+    let i = parseInt(currentClicked.charAt(0));
+    let j = parseInt(currentClicked.charAt(1));
+
+    switch (currentMove) {
+        case 'right':
+            //move GN right
+            console.log('1');
+            testWriteBoard();
+            boardWP[i][j + 1] = boardWP[i][j];
+            console.log('2');
+            testWriteBoard();
+            boardWP[i][j] = board[i][j];
+
+            //find piece assosiated with GN and also move that(G)
+            for (let x = 0; x < boardWP.length; x++) {
+                for (let y = 0; y < boardWP[i].length; y++) {
+                    if (boardWP[x][y] === 'G') {
+                        boardWP[x][y + 1] = boardWP[x][y];
+                        boardWP[x][y] = board[x][y];
+                        break;
+                    }
+                }
+            }
+
+            refreshBoardImg();
+            break;
+        case 'left':
+            //move GN left
+            boardWP[i][j - 1] = boardWP[i][j];
+            boardWP[i][j] = board[i][j];
+
+            //find piece assosiated with GN and also move that(G)
+            for (let x = 0; x < boardWP.length; x++) {
+                for (let y = 0; y < boardWP[i].length; y++) {
+                    if (boardWP[x][y] === 'G') {
+                        boardWP[x][y - 1] = boardWP[x][y];
+                        boardWP[x][y] = board[x][y];
+                        break;
+                    }
+                }
+            }
+            refreshBoardImg();
+            break;
+        case 'up':
+            //move GN up
+            boardWP[i - 1][j] = boardWP[i][j];
+            boardWP[i][j] = board[i][j];
+
+            //find piece assosiated with GN and also move that(G)
+            for (let x = 0; x < boardWP.length; x++) {
+                for (let y = 0; y < boardWP[i].length; y++) {
+                    if (boardWP[x][y] === 'G') {
+                        boardWP[x - 1][y] = boardWP[x][y];
+                        boardWP[x][y] = board[x][y];
+                        break;
+                    }
+                }
+            }
+            refreshBoardImg();
+            testWriteBoard();
+            break;
+        case 'down':
+            console.log('guh');
+            testWriteBoard();
+            //find piece assosiated with GN and also move that(G)
+            //gotta move bottom piece first otherwise it goes into itself
+            for (let x = boardWP.length; x < 0; x--) {
+                for (let y = boardWP[i].length; y < 0 ; y--) {
+                    if (boardWP[x][y] === 'G') {
+                        boardWP[x + 1][y] = boardWP[x][y];
+                        boardWP[x][y] = board[x][y];
+                        break;
+                    }
+                }
+            }
+            console.log('guh');
+            testWriteBoard();
+            //move GN down
+            boardWP[i + 1][j] = boardWP[i][j];
+            boardWP[i][j] = board[i][j];
+            console.log('guh');
+            testWriteBoard();
+
+            refreshBoardImg();
+            break;
+    }
+}
+
+
+
+
+
 
 //refreshes the board by keeping the img elements and only changing the src link
 function refreshBoardImg() {
@@ -184,77 +335,10 @@ function refreshBoardImg() {
     }
 }
 
-//adds event listeners to current img (and also moves but that might be better in own function)
-function lookForInput(i, j) {
-    document
-        .querySelector('#B' + i + '-' + j)
-        .addEventListener('click', function () {
-            console.log('clicked' + ' ' + i + '-' + j);
 
-            if (boardWP[i][j] == 'GN') {
-                //YOOO is this still needed? and if it is how do we make it modular/ make a function for it to add others more easily
-
-                document.addEventListener('keydown', function (event) {
-                    if (event.keyCode == 37) {
-                        console.log('Left was pressed');
-                        if (boardWP[i][j] == 'GN') {
-                            //YOOO if so is this still needed
-
-                            //move GN left
-                            boardWP[i][j - 1] = boardWP[i][j];
-                            boardWP[i][j] = board[i][j];
-
-                            //find piece assosiated with GN and also move that(G)
-                            for (let x = 0; x < boardWP.length; x++) {
-                                for (let y = 0; y < boardWP[i].length; y++) {
-                                    if (boardWP[x][y] == 'G') {
-                                        boardWP[x][y - 1] = boardWP[x][y];
-                                        boardWP[x][y] = board[x][y];
-                                        break;
-                                    }
-                                }
-                            }
-
-                            //refreshBoard();
-                            refreshBoardImg();
-                        }
-                    } else if (event.keyCode == 38) {
-                        console.log('up was pressed');
-                    } else if (event.keyCode == 39) {
-                        console.log('Right was pressed');
-                        if (boardWP[i][j] == 'GN') {
-                            //YOOO if so is this still needed
-
-                            //move GN right
-                            boardWP[i][j + 1] = boardWP[i][j];
-                            boardWP[i][j] = board[i][j];
-
-                            //find piece assosiated with GN and also move that(G)
-                            for (let x = 0; x < boardWP.length; x++) {
-                                for (let y = 0; y < boardWP[i].length; y++) {
-                                    if (boardWP[x][y] == 'G') {
-                                        boardWP[x][y + 1] = boardWP[x][y];
-                                        boardWP[x][y] = board[x][y];
-                                        break;
-                                    }
-                                }
-                            }
-
-                            //refreshBoard();
-                            refreshBoardImg();
-                        }
-                    } else if (event.keyCode == 40) {
-                        console.log('down was pressed');
-                    }
-                });
-            }
-        });
+function testWriteBoard() {
+    for (let i = 0; i < boardWP.length; i++) {
+        console.log(boardWP[i]);
+    }
 }
-
-
-
-
-
-
-
 
