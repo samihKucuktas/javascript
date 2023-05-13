@@ -269,8 +269,11 @@ function moveGN() {
             testWriteBoard();
             //find piece assosiated with GN and also move that(G)
             //gotta move bottom piece first otherwise it goes into itself
-            for (let x = boardWP.length; x < 0; x--) {
-                for (let y = boardWP[i].length; y < 0 ; y--) {
+            for (let x = boardWP.length -1; x > 0; x--) {
+                console.log('x: ' + x);
+                for (let y = boardWP[i].length -1; y > 0 ; y--) {
+                    console.log('y: ' + y);
+                    console.log('boardWP[x][y]: ' + boardWP[x][y])
                     if (boardWP[x][y] === 'G') {
                         boardWP[x + 1][y] = boardWP[x][y];
                         boardWP[x][y] = board[x][y];
