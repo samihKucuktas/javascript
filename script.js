@@ -41,7 +41,7 @@ document.querySelector('#B0-0').addEventListener('click', function() {
 
 //board without any pieces
 let board = [
-    ['X', 'O', 'X', 'X'],
+    ['X', 'X', 'O', 'X'],
     ['O', 'X', 'X', 'X'],
     ['X', 'O', 'X', 'X'],
     ['X', 'X', 'X', 'O'],
@@ -49,7 +49,7 @@ let board = [
 
 //board With Pieces
 let boardWP = [
-    ['X', 'O', 'X', 'X'],
+    ['X', 'X', 'O', 'X'],
     ['O', 'X', 'X', 'X'],
     ['X', 'O', 'GN', 'X'],
     ['X', 'X', 'G', 'O'],
@@ -92,8 +92,7 @@ function addBoard(id, pieceCode) {
 
     switch (pieceCode) {
         case 'X':
-            oImg.setAttribute('src',
-                './pieces/X.png');
+            oImg.setAttribute('src', './pieces/X.png');
             break;
         case 'O':
             oImg.setAttribute('src','./pieces/O.png');
@@ -114,10 +113,11 @@ function addBoard(id, pieceCode) {
 
 //current selection
 let currentClicked;
+//current move
 let currentMove;
 
 
-
+//event listeners for on-screen arrows
 document.getElementById('arrRightid').addEventListener('click', function () {
     console.log('right arrow');
     currentMove = 'right';
@@ -140,7 +140,7 @@ document.getElementById('arrDownid').addEventListener('click', function () {
 });
 
 
-
+//event listeners for keyboard arrows
 document.addEventListener('keydown', function (event) {
     if (event.keyCode === 37) {
         console.log('left key');
@@ -163,7 +163,7 @@ document.addEventListener('keydown', function (event) {
 
 
 
-//initial loop of all the img of the board and adds click event listeners
+//adds event listener for which piece has been clicked/selected
 for (let i = 0; i < boardWP.length; i++) {
     for (let j = 0; j < boardWP[i].length; j++) {
         document.querySelector('#B' + i + '-' + j).addEventListener('click', function () {
@@ -269,9 +269,9 @@ function moveGN() {
             testWriteBoard();
             //find piece assosiated with GN and also move that(G)
             //gotta move bottom piece first otherwise it goes into itself
-            for (let x = boardWP.length -1; x > 0; x--) {
+            for (let x = boardWP.length -1; x >= 0; x--) {
                 console.log('x: ' + x);
-                for (let y = boardWP[i].length -1; y > 0 ; y--) {
+                for (let y = boardWP[i].length -1; y >= 0 ; y--) {
                     console.log('y: ' + y);
                     console.log('boardWP[x][y]: ' + boardWP[x][y])
                     if (boardWP[x][y] === 'G') {
@@ -333,7 +333,6 @@ function refreshBoardImg() {
                     break;
             }
 
-            //lookForInput(i, j);
         }
     }
 }
