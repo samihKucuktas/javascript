@@ -92,16 +92,16 @@ function addBoard(id, pieceCode) {
 
     switch (pieceCode) {
         case 'X':
-            oImg.setAttribute('src', './pieces/X.png');
+            oImg.setAttribute('src', './pieces/TEMP_OUDE_PIECES/X.png');
             break;
         case 'O':
-            oImg.setAttribute('src','./pieces/O.png');
+            oImg.setAttribute('src','./pieces/TEMP_OUDE_PIECES/O.png');
             break;
         case 'G':
-            oImg.setAttribute('src','./pieces/G.png');
+            oImg.setAttribute('src','./pieces/TEMP_OUDE_PIECES/G.png');
             break;
         case 'GN':
-            oImg.setAttribute('src','./pieces/GN.png');
+            oImg.setAttribute('src','./pieces/TEMP_OUDE_PIECES/GN.png');
             break;
     }
 
@@ -310,25 +310,25 @@ function refreshBoardImg() {
                 case 'X':
                     element.setAttribute(
                         'src',
-                        './pieces/X.png'
+                        './pieces/TEMP_OUDE_PIECES/X.png'
                     );
                     break;
                 case 'O':
                     element.setAttribute(
                         'src',
-                        './pieces/O.png'
+                        './pieces/TEMP_OUDE_PIECES/O.png'
                     );
                     break;
                 case 'G':
                     element.setAttribute(
                         'src',
-                        './pieces/G.png'
+                        './pieces/TEMP_OUDE_PIECES/G.png'
                     );
                     break;
                 case 'GN':
                     element.setAttribute(
                         'src',
-                        './pieces/GN.png'
+                        './pieces/TEMP_OUDE_PIECES/GN.png'
                     );
                     break;
             }
