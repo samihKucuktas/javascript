@@ -47,7 +47,17 @@ let board = [
     ['X', 'X', 'X', 'O'],
 ];
 
-//Temp With Pieces
+
+//board With Pieces
+let boardWP = [
+    ['X', 'X', 'O', 'X'],
+    ['O', 'X', 'X', 'X'],
+    ['BN', 'O', 'GN', 'X'],
+    ['B', 'BF', 'G', 'O'],
+];
+
+
+//Temp Without Pieces
 let boardTemp = [
     ['X', 'X', 'X', 'X'],
     ['X', 'X', 'X', 'X'],
@@ -55,12 +65,12 @@ let boardTemp = [
     ['X', 'X', 'X', 'X'],
 ];
 
-//board With Pieces
-let boardWP = [
-    ['X', 'X', 'O', 'X'],
-    ['O', 'RN', 'R', 'X'],
-    ['X', 'UF', 'GN', 'X'],
-    ['X', 'X', 'G', 'O'],
+//Temp With Pieces
+let boardWPTemp = [
+    ['X', 'X', 'X', 'X'],
+    ['X', 'X', 'X', 'X'],
+    ['X', 'X', 'X', 'X'],
+    ['X', 'X', 'X', 'X'],
 ];
 
 //write array in console
@@ -207,6 +217,122 @@ function addBoard(id, pieceCode) {
             );
             oImg.style.transform = 'rotate(-90deg)';
             break;
+        //NOT_SELECTED YELLOW SQUIRREL
+        case 'Y':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/NOT_SELECTED/YELLOW/Y.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'YF':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/NOT_SELECTED/YELLOW/YF.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'YN':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/NOT_SELECTED/YELLOW/YN.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'YNN':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/NOT_SELECTED/YELLOW/YNN.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        //SELECTED YELLOW SQUIRREL
+        case 'YS':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/SELECTED/YELLOW/YS.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'YFS':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/SELECTED/YELLOW/YFS.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'YNS':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/SELECTED/YELLOW/YNS.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'YNNS':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/SELECTED/YELLOW/YNNS.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        //NOT_SELECTED BLACK SQUIRREL
+        case 'B':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/NOT_SELECTED/BLACK/B.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'BF':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/NOT_SELECTED/BLACK/BF.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'BN':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/NOT_SELECTED/BLACK/BN.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'BNN':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/NOT_SELECTED/BLACK/BNN.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        //SELECTED BLACK SQUIRREL
+        case 'BS':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/SELECTED/BLACK/BS.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'BFS':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/SELECTED/BLACK/BFS.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'BNS':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/SELECTED/BLACK/BNS.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
+        case 'BNNS':
+            oImg.setAttribute(
+                'src',
+                './pieces/UP/SELECTED/BLACK/BNNS.PNG'
+            );
+            oImg.style.transform = 'rotate(0deg)';
+            break;
     }
 
 
@@ -321,10 +447,16 @@ function Movement() {
     console.log('pieceCode: ' + pieceCode);
 
     let crashCounter = 0;
-    //boardTemp = boardWP
+    //boardWPTemp = boardWP
     for (let x = 0; x < boardWP.length; x++) {
         for (let y = 0; y < boardWP[x].length; y++) {
-            boardTemp[x][y] = boardWP[x][y];
+            boardWPTemp[x][y] = boardWP[x][y];
+        }
+    }
+    //boardTemp = board
+    for (let x = 0; x < board.length; x++) {
+        for (let y = 0; y < board[x].length; y++) {
+            boardTemp[x][y] = board[x][y];
         }
     }
 
@@ -358,11 +490,19 @@ function Movement() {
                 }
             }
 
-            //boardWP = boardTemp, set board back to previous state if there is ever a crash
+            //set board back to previous state if there is ever a crash
             if (crashCounter > 0){
+                //boardWP = boardWPTemp
                 for (let x = 0; x < boardWP.length; x++) {
                     for (let y = 0; y < boardWP[x].length; y++) {
-                        boardWP[x][y] = boardTemp[x][y];
+                        boardWP[x][y] = boardWPTemp[x][y];
+                    }
+                }
+
+                //board = boardTemp
+                for (let x = 0; x < board.length; x++) {
+                    for (let y = 0; y < board[x].length; y++) {
+                        board[x][y] = boardTemp[x][y];
                     }
                 }
             }
@@ -397,11 +537,18 @@ function Movement() {
                 }
             }
 
-            //boardWP = boardTemp, set board back to previous state if there is ever a crash
+            //boardWP = boardWPTemp, set board back to previous state if there is ever a crash
             if (crashCounter > 0){
                 for (let x = 0; x < boardWP.length; x++) {
                     for (let y = 0; y < boardWP[x].length; y++) {
-                        boardWP[x][y] = boardTemp[x][y];
+                        boardWP[x][y] = boardWPTemp[x][y];
+                    }
+                }
+
+                //board = boardTemp
+                for (let x = 0; x < board.length; x++) {
+                    for (let y = 0; y < board[x].length; y++) {
+                        board[x][y] = boardTemp[x][y];
                     }
                 }
             }
@@ -436,11 +583,18 @@ function Movement() {
                 }
             }
 
-            //boardWP = boardTemp, set board back to previous state if there is ever a crash
+            //boardWP = boardWPTemp, set board back to previous state if there is ever a crash
             if (crashCounter > 0){
                 for (let x = 0; x < boardWP.length; x++) {
                     for (let y = 0; y < boardWP[x].length; y++) {
-                        boardWP[x][y] = boardTemp[x][y];
+                        boardWP[x][y] = boardWPTemp[x][y];
+                    }
+                }
+
+                //board = boardTemp
+                for (let x = 0; x < board.length; x++) {
+                    for (let y = 0; y < board[x].length; y++) {
+                        board[x][y] = boardTemp[x][y];
                     }
                 }
             }
@@ -475,11 +629,18 @@ function Movement() {
                 }
             }
 
-            //boardWP = boardTemp, set board back to previous state if there is ever a crash
+            //boardWP = boardWPTemp, set board back to previous state if there is ever a crash
             if (crashCounter > 0){
                 for (let x = 0; x < boardWP.length; x++) {
                     for (let y = 0; y < boardWP[x].length; y++) {
-                        boardWP[x][y] = boardTemp[x][y];
+                        boardWP[x][y] = boardWPTemp[x][y];
+                    }
+                }
+
+                //board = boardTemp
+                for (let x = 0; x < board.length; x++) {
+                    for (let y = 0; y < board[x].length; y++) {
+                        board[x][y] = boardTemp[x][y];
                     }
                 }
             }
@@ -487,7 +648,7 @@ function Movement() {
             refreshBoardImg();
             break;
     }
-    checkWin();
+    //checkWin();
 
 }
 
@@ -625,7 +786,125 @@ function refreshBoardImg() {
                     );
                     element.style.transform = 'rotate(-90deg)';
                     break;
+                //NOT_SELECTED YELLOW SQUIRREL
+                case 'Y':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/NOT_SELECTED/YELLOW/Y.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'YF':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/NOT_SELECTED/YELLOW/YF.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'YN':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/NOT_SELECTED/YELLOW/YN.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'YNN':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/NOT_SELECTED/YELLOW/YNN.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                //SELECTED YELLOW SQUIRREL
+                case 'YS':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/SELECTED/YELLOW/YS.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'YFS':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/SELECTED/YELLOW/YFS.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'YNS':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/SELECTED/YELLOW/YNS.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'YNNS':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/SELECTED/YELLOW/YNNS.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                //NOT_SELECTED BLACK SQUIRREL
+                case 'B':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/NOT_SELECTED/BLACK/B.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'BF':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/NOT_SELECTED/BLACK/BF.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'BN':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/NOT_SELECTED/BLACK/BN.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'BNN':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/NOT_SELECTED/BLACK/BNN.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                //SELECTED BLACK SQUIRREL
+                case 'BS':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/SELECTED/BLACK/BS.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'BFS':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/SELECTED/BLACK/BFS.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'BNS':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/SELECTED/BLACK/BNS.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+                case 'BNNS':
+                    element.setAttribute(
+                        'src',
+                        './pieces/UP/SELECTED/BLACK/BNNS.PNG'
+                    );
+                    element.style.transform = 'rotate(0deg)';
+                    break;
+
             }
+
 
 
         }
