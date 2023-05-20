@@ -92,9 +92,11 @@ G = GRAY
 Y = YELLOW
 B = BLACK
 
+X = BUTT_PIECE
 XN = XXXX_NUT
 XNN = XXXX_NO_NUT
 XF = XXXX_FLOWER
+XXXS = SELECTED_PIECE
 */
 
 //render full board in html
@@ -648,7 +650,7 @@ function Movement() {
             refreshBoardImg();
             break;
     }
-    //checkWin();
+    checkWin();
 
 }
 
