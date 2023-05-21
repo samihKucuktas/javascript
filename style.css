@@ -200,6 +200,12 @@ nav ul div{
     color: #fff;
     border: none;
 }
+
+.timer p{
+    font-size: 3em;
+    text-align: center;
+}
+
 .arrowControl{
     position: relative;
     top: 10rem;
