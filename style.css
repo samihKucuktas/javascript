@@ -62,7 +62,6 @@ nav ul div{
     top: 0;
     width: 5.2%;
     height: 100%;
-    background-color: #A7C748;
 }
 #horizonatal_bar{
     position: absolute;
@@ -70,7 +69,6 @@ nav ul div{
     bottom: 0;
     width: 100%;
     height: 9.26%;
-    background-color: #A7C748;
 }
 .dificulty h1{
     padding: 0;
@@ -115,19 +113,19 @@ nav ul div{
     padding-block: .3vh;
     text-decoration: none;
 }
-.starter a{
+.starter a,.starterspan{
     background-color: #A7C748;
 }
-.junior a{
+.junior a,.juniorspan{
     background-color: #E3CC51;
 }
-.expert a{
+.expert a,.expertspan{
     background-color: #E32332;
 }
-.master a{
+.master a,.masterspan{
     background-color: #7B3387;
 }
-.wizard a{
+.wizard a,.wizardspan{
     background-color: #0768AF;
 }
 
