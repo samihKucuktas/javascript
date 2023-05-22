@@ -6,7 +6,7 @@
         <title>Slide Puzzle</title>
         <link rel="stylesheet" href="../style.css">
 <!--        <script defer src="./script.js"></script>-->
-        <script defer src=""></script>
+        <script defer src="../timer.js"></script>
     </head>
 
     <body>
@@ -46,11 +46,11 @@
 
             <div class="control">
                 <div class="timer">
-                    <h2 id="time_passed">Time: 34:16</h2>
-                    <button>
+                    <p id="countdown">00:00</p>
+                    <button onclick="location.reload()">
                         <img src="https://cdn0.iconfinder.com/data/icons/glyphpack/41/refresh-512.png" alt="Reload" class="refresh">
                         Restart
-                    </button>
+                    </button >
                 </div>
 
                 <div class="arrowControl">
