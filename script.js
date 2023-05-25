@@ -118,24 +118,28 @@ function addBoard(id, pieceCode) {
                 'src',
                 './pieces/BOARD/X.png'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
         case 'O':
             oImg.setAttribute(
                 'src',
                 './pieces/BOARD/O.png'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
         case 'FO':
             oImg.setAttribute(
                 'src',
                 './pieces/BOARD/FO.png'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
         case 'UF':
             oImg.setAttribute(
                 'src',
                 './pieces/BOARD/UF.png'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
             //NOT_SELECTED GREY SQUIRREL
         case 'G':
@@ -143,18 +147,21 @@ function addBoard(id, pieceCode) {
                 'src',
                 './pieces/UP/NOT_SELECTED/GREY/G.PNG'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
         case 'GN':
             oImg.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/GREY/GN.PNG'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
         case 'GNN':
             oImg.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/GREY/GNN.PNG'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
         //SELECTED GREY SQUIRREL
         case 'GS':
@@ -162,18 +169,21 @@ function addBoard(id, pieceCode) {
                 'src',
                 './pieces/UP/SELECTED/GREY/GS.PNG'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
         case 'GNS':
             oImg.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/GREY/GNS.PNG'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
         case 'GNNS':
             oImg.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/GREY/GNNS.PNG'
             );
+            oImg.style.transform = 'rotate(0deg)';
             break;
         //NOT_SELECTED RED SQUIRREL
         case 'R':
