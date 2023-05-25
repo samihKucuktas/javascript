@@ -668,7 +668,8 @@ function checkWin() {
     }
 
     if (totalNs === 0){
-        alert("YOU WIN! \n all nuts have been deposited");
+        return true
+        // alert("YOU WIN! \n all nuts have been deposited");
     }
 
 }
