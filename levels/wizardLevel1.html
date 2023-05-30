@@ -14,9 +14,9 @@
             <h1>Levels:</h1>
             <nav>
                 <ul class="starter">
-                    <li><a href="../index.html">Level 1</a></li>
-                    <li><a href="./starterLevel2.html">Level 2</a></li>
-                    <li><a href="./starterLevel3.html">Level 3</a></li>
+                        <li><a href="../index.html">Level 1</a></li>
+                        <li><a href="./starterLevel2.html">Level 2</a></li>
+                        <li><a href="./starterLevel3.html">Level 3</a></li>
                 </ul>
                 <ul class="junior" >
                         <li><a href="./juniorLevel1.html">Level 1</a></li>
@@ -66,10 +66,10 @@
 
 
         <section class="border">
-            <span class="starterspan" id="vertical_bar"></span>
-            <span class="starterspan" id="horizonatal_bar"></span>
+            <span class="wizardspan" id="vertical_bar"></span>
+            <span class="wizardspan" id="horizonatal_bar"></span>
             <div class="dificulty">
-                <h1 class="starter" >Starter</h1>
+                <h1 class="wizard" >Expert</h1>
             </div>
         </section>
         <footer>
@@ -85,10 +85,10 @@
             ['X', 'X', 'X', 'O'],
             ];
         let boardWP = [
-            ['X', 'GN', 'O', 'X'],
-            ['RF', 'G', 'YFN', 'X'],
-            ['X', 'O', 'YLN', 'YL'],
-            ['X', 'X', 'X', 'O'],
+            ['BN', 'X', 'O', 'YD'],
+            ['B', 'BF', 'YFR', 'YND'],
+            ['X', 'O', 'RN', 'X'],
+            ['X', 'X', 'R', 'RF'],
             ];
 
         for (let i = 0; i < boardWP.length; i++) {
@@ -109,23 +109,32 @@
                     case 'O':
                         oImg.setAttribute('src','../pieces/O.png');
                         break;
-                    case 'G':
-                        oImg.setAttribute('src','../pieces/G.png');
+                    case 'R':
+                        oImg.setAttribute('src','../pieces/R.png');
                         break;
-                    case 'GN':
-                        oImg.setAttribute('src','../pieces/GN.png');
+                    case 'RN':
+                        oImg.setAttribute('src','../pieces/RN.png');
                         break;
                     case 'RF':
                         oImg.setAttribute('src','../pieces/RF.png');
                         break;
-                    case 'YLN':
-                        oImg.setAttribute('src','../pieces/YLN.png');
+                    case 'YND':
+                        oImg.setAttribute('src','../pieces/YND.png');
                         break;
-                    case 'YFN':
-                        oImg.setAttribute('src','../pieces/YFN.png');
+                    case 'YFR':
+                        oImg.setAttribute('src','../pieces/YFR.png');
                         break;
-                    case 'YL':
-                        oImg.setAttribute('src','../pieces/YL.png');
+                    case 'YD':
+                        oImg.setAttribute('src','../pieces/YD.png');
+                        break;
+                    case 'BN':
+                        oImg.setAttribute('src','../pieces/BN.png');
+                        break;
+                    case 'B':
+                        oImg.setAttribute('src','../pieces/B.png');
+                        break;
+                    case 'BF':
+                        oImg.setAttribute('src','../pieces/BF.png');
                         break;
                 }
 
