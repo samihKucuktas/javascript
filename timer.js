@@ -13,6 +13,7 @@ function updateCountdown() {
 
         time++;
     }else if (givealert === true){
+        time--;
         alert("YOU WIN! \n all nuts have been deposited \n you took " + time + " seconds");
         givealert = false;
     }
