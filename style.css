@@ -231,3 +231,42 @@ footer button{
     font-size: large;
     font-weight: lighter;
 }
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+.rule_button, .rule_button:focus-visible{
+    cursor: pointer;
+}
+
+ #tutorialDialog{
+     max-width: 40%;
+     background-color: #0099dd;
+     border-color: #9FC0DCFF;
+     border-radius: 2rem;
+ }
+.tutoriallist{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tutoriallist button{
+    width: 20%;
+    min-width: 5rem;
+    border-color: #5D2901;
+    background-color: #87440F;
+    border-radius: .5rem;
+}
+.tutoriallist ul{
+    margin: 0;
+    padding: 0;
+}
+.tutoriallist li{
+    margin: 0;
+    padding-bottom: 1rem;
+    list-style: none;
+}
+button{
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+}

@@ -10,7 +10,21 @@
     </head>
 
     <body>
-        <section class="levels">
+    <section class="tutSec">
+        <dialog id="tutorialDialog">
+            <div class="tutoriallist">
+                <h1>How to play</h1>
+                <ul>
+                    <li>Select the level you want to play</li>
+                    <li>click on the squirrels to select them now you can use the arrows on screen or on your keyboard to move the squirrels</li>
+                    <li>you win when all squirrels have dropped their nuts in a hole</li>
+                </ul>
+                <button onclick="tutorialDialog.close()">Close</button>
+            </div>
+        </dialog>
+
+    </section>
+            <section class="levels">
             <h1>Levels:</h1>
             <nav>
                 <ul class="starter">
@@ -73,7 +87,7 @@
             </div>
         </section>
         <footer>
-           <button class="rule_button">Rules</button>
+           <button onclick="tutorialDialog.showModal()" class="tutorial_button">How to play?</button>
         </footer>
     </body>
 </html>
