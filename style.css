@@ -179,6 +179,12 @@
 /*    font-weight: lighter;*/
 /*}*/
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
 .rule_button, .rule_button:focus-visible {
     cursor: pointer;
 }
@@ -320,35 +326,35 @@ section {
 .levels li button{
     border-radius: .5rem;
 }
-.starter li button {
+.starter li button, h1.starter {
     background-color: #95b241;
     border: #44501d solid 2px;
     margin-inline: .1rem;
     color: #000;
 }
 
-.junior li button {
+.junior li button, h1.junior {
     background-color: #cbb649;
     border: #6E6328FF solid 2px;
     margin-inline: .1rem;
     color: #2d2d2d;
 }
 
-.expert li button {
+.expert li button, h1.expert {
     background-color: #cb1f2d;
     border: #81131d solid 2px;
     margin-inline: .1rem;
     color: #d0d0d0;
 }
 
-.master li button {
+.master li button, h1.master {
     background-color: #6d2e78;
     border: #431d4b solid 2px;
     margin-inline: .1rem;
     color: #d9d9d9;
 }
 
-.wizard li button {
+.wizard li button, h1.wizard {
     background-color: #065d9c;
     border: #04395e solid 2px;
     margin-inline: .1rem;
@@ -472,16 +478,38 @@ section {
     #countdown {
         font-size: xxx-large;
     }
+    .game{
+
+        max-width: 65vw;
+        margin-inline: 10vw;
+    }
+    .control{
+        margin-left: 2.5rem;
+    }
 }
 
-@media only screen and (min-width: 80rem) {
-    h1.starter{
+@media only screen and (min-width: 100rem) {
+    .boardborder4{
+        width: 40vw;
+        height: 40vw;
+        margin-right: 2rem;
+    }
+    .control{
+        margin-left: .5rem;
+    }
+    #board{
+        box-sizing: border-box;
+    }
+    .control{
+        margin:0
+    }
+    .dificulty h1{
         background-color: transparent;
         padding: 0;
-        color: #5D2901;
+        border: 0;
         width: fit-content;
         position: absolute;
-        right: 0;
+        right: -3rem;
         top: 8rem;
         font-size: 4rem;
         rotate: -90deg;
@@ -490,7 +518,11 @@ section {
     .levels nav, .levels ul {
         display: flex;
         flex-direction: column;
+        justify-content: start;
         width: 16rem;
+        overflow: visible;
+
+
     }
 
     .levels li button {
@@ -498,36 +530,71 @@ section {
         height: 3rem;
         margin-block: 1px;
         font-size: large;
+
     }
     .levels nav{
-        padding: 2rem;
-        overflow-y: scroll;
         background-color: #87440F;
         border: 0;
-        height: 55rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        vertical-align: top;
+        margin-top: 0;
+
     }
     .levels h1{
         margin-bottom: 1rem;
+
     }
     .levels{
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         max-width: 20rem;
-        height: 55.5rem;
+        height: 40vw;
         padding: 2rem;
         background-color: #87440F;
         border: #5D2901 solid 12px;
         border-radius: 3rem;
+        margin-left:3rem
     }
     body{
-        padding-top: 2rem;
         display: flex;
         justify-content: space-between;
+        padding-right: 7rem;
     }
     .game.control{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+    }
+    #vertical_bar{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width:6rem;
+        background-color: black;
+    }
+    #horizonatal_bar{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height:4rem;
+        background-color: black;
+    }
+    nav{
+        padding-right: 1rem ;
+    }
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .game{
+        margin-left: 5vw;
     }
 
 }
