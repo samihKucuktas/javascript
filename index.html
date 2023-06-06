@@ -24,33 +24,44 @@
         </dialog>
 
     </section>
+    <section class="border">
+        <span class="difcolbrdr" id="vertical_bar"></span>
+        <span class="difcolbrdr" id="horizonatal_bar"></span>
+        <div class="dificulty">
+            <h1 class="starter">Starter</h1>
+            <h1 class="junior" style="display: none"  >Junior</h1>
+            <h1 class="expert" style="display: none"  >Starter</h1>
+            <h1 class="master" style="display: none"  >Master</h1>
+            <h1 class="wizard" style="display: none"  >Wizard</h1>
+        </div>
+    </section>
             <section class="levels">
             <h1>Levels:</h1>
             <nav>
                 <ul class="starter">
-                        <li><a href="./index.html">Level 1</a></li>
-                        <li><a href="./levels/starterLevel2.html">Level 2</a></li>
-                        <li><a href="./levels/starterLevel3.html">Level 3</a></li>
+                    <li><button>Level 1</button></li>
+                    <li><button>Level 2</button></li>
+                    <li><button>Level 3</button></li>
                 </ul>
                 <ul class="junior" >
-                        <li><a href="./levels/juniorLevel1.html">Level 1</a></li>
-                        <li><a href="./levels/juniorLevel2.html">Level 2</a></li>
-                        <li><a href="./levels/juniorLevel3.html">Level 3</a></li>
+                    <li><button>Level 1</button></li>
+                    <li><button>Level 2</button></li>
+                    <li><button>Level 3</button></li>
                 </ul>
                 <ul class="expert" >
-                        <li><a href="./levels/expertLevel1.html">Level 1</a></li>
-                        <li><a href="./levels/expertLevel2.html">Level 2</a></li>
-                        <li><a href="./levels/expertLevel3.html">Level 3</a></li>
+                    <li><button>Level 1</button></li>
+                    <li><button>Level 2</button></li>
+                    <li><button>Level 3</button></li>
                 </ul>
                 <ul class="master" >
-                        <li><a href="./levels/masterLevel1.html">Level 1</a></li>
-                        <li><a href="./levels/masterLevel2.html">Level 2</a></li>
-                        <li><a href="./levels/masterLevel3.html">Level 3</a></li>
+                    <li><button>Level 1</button></li>
+                    <li><button>Level 2</button></li>
+                    <li><button>Level 3</button></li>
                 </ul>
                 <ul class="wizard" >
-                        <li><a href="./link_naar_lvl1">Level 1</a></li>
-                        <li><a href="./link_naar_lvl2">Level 2</a></li>
-                        <li><a href="./link_naar_lvl3">Level 3</a></li>
+                    <li><button>Level 1</button></li>
+                    <li><button>Level 2</button></li>
+                    <li><button>Level 3</button></li>
                 </ul>
             </nav>
         </section>
@@ -62,7 +73,7 @@
                 <div class="timer">
                     <p id="countdown">0:00</p>
                     <button onclick="location.reload()">
-                        <img src="https://cdn0.iconfinder.com/data/icons/glyphpack/41/refresh-512.png" alt="Reload" class="refresh">
+<!--                        <img src="https://cdn0.iconfinder.com/data/icons/glyphpack/41/refresh-512.png" alt="Reload" class="refresh">-->
                         Restart
                     </button>
                 </div>
@@ -70,21 +81,15 @@
                 <div class="arrowControl">
                     <!--right is the default orientation of the arrow-->
                     <button class="arrRight" id="arrRightid"><img src="./arrows/right.png" alt="arrow right"></button>
-                    <button class="arrUp" id="arrUpid"><img src="./arrows/up.png" alt="arrow up"></button>
+                    <div class="flexarrow">
+                        <button class="arrUp" id="arrUpid"><img src="./arrows/up.png" alt="arrow up"></button>
+                        <button class="arrDown" id="arrDownid"><img src="./arrows/down.png" alt="arrow down"></button>
+                    </div>
+
                     <button class="arrLeft" id="arrLeftid"><img src="./arrows/left.png" alt="arrow left"></button>
-                    <button class="arrDown" id="arrDownid"><img src="./arrows/down.png" alt="arrow down"></button>
                 </div>
             </div>
 
-        </section>
-
-
-        <section class="border">
-            <span class="starterspan" id="vertical_bar"></span>
-            <span class="starterspan" id="horizonatal_bar"></span>
-            <div class="dificulty">
-                <h1 class="starter" >Starter</h1>
-            </div>
         </section>
         <footer>
            <button onclick="tutorialDialog.showModal()" class="tutorial_button">How to play?</button>
