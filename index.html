@@ -26,8 +26,17 @@
             </div>
         </dialog>
 
+    <div id="startContainer">
+    <div id="textContainer">
+        <h1 class="welcomeText">Welcome to Squirrels Go Nuts!</h1>
+        <h2 class="welcomeText">Press start to play</h2>
+    </div>
 
+    <button id="startButton">START</button>
+    </div>
+    <div id="backgroundImage"></div>
 
+    <div id="pageContent">
     <section class="border">
         <span class="difcolbrdr" id="vertical_bar"></span>
         <span class="difcolbrdr" id="horizonatal_bar"></span>
@@ -119,11 +128,20 @@
             </div>
 
     </section>
-
+    </div>
 
     <footer>
         <button onclick="tutorialDialog.showModal()" class="tutorial_button">How to play?</button>
     </footer>
+    <script>
+            document.getElementById("startButton").addEventListener("click", function() {
+            document.getElementById("startButton").style.display = "none";
+            document.getElementById("pageContent").style.display = "block";
+            document.getElementById("backgroundImage").style.display = "none"
+            document.getElementById("textContainer").style.display = "none";
+            document.getElementById("startContainer").style.display = "none";
+        });
+    </script>
 
 </body>
 
