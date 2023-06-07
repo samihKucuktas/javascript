@@ -25,6 +25,7 @@ document.querySelector('.starter li:nth-child(1)').addEventListener("click", (ev
         [0, 0, 0, 0],
     ];
 
+    time = 0;
     revertBoardToDefault();
     refreshBoardImg();
 });
@@ -46,7 +47,7 @@ document.querySelector('.starter li:nth-child(2)').addEventListener("click", (ev
         [0, 0, 0, 0],
     ];
 
-
+    time = 0;
     revertBoardToDefault();
     refreshBoardImg();
 });
@@ -70,9 +71,9 @@ let board = [
 //board With Pieces (gets replaced)
 boardWP = [
     ['X', 'X', 'O', 'X'],
-    ['O', 'X', 'X', 'X'],
-    ['X', 'O', 'X', 'X'],
-    ['X', 'X', 'X', 'O'],
+    ['O', 'RN', 'R', 'X'],
+    ['X', 'UF', 'GN', 'X'],
+    ['X', 'X', 'G', 'O'],
 ];
 
 
@@ -87,7 +88,7 @@ let rotationValuesDefault = [
 //rotation values for the pieces (gets replaced)
 rotationValues = [
     [0, 0, 0, 0],
-    [0, 0, 0, 0],
+    [0, -90, -90, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0],
 ];

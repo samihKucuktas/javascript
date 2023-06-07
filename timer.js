@@ -11,7 +11,7 @@ function updateCountdown() {
         seconds = seconds < 10 ? '0' + seconds : seconds;
         const contdownEl = document.getElementById("countdown");
         contdownEl.innerHTML = `${minutes}:${seconds}`;
-console.log(time)
+        console.log(time)
         time++;
     }else if (givealert){
         time--;
