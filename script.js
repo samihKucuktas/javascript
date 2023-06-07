@@ -6,6 +6,7 @@
 let boardWP;
 let rotationValues;
 
+//STARTER
 //LEVEL1
 document.querySelector('.starter li:nth-child(1)').addEventListener("click", (event) => {
 
@@ -30,7 +31,7 @@ document.querySelector('.starter li:nth-child(1)').addEventListener("click", (ev
     refreshBoardImg();
 });
 
-//LEVEL2 nth child werkt niet
+//LEVEL2
 document.querySelector('.starter li:nth-child(2)').addEventListener("click", (event) => {
 
     boardWP = [
@@ -52,8 +53,295 @@ document.querySelector('.starter li:nth-child(2)').addEventListener("click", (ev
     refreshBoardImg();
 });
 
+//LEVEL3 
+document.querySelector('.starter li:nth-child(3)').addEventListener("click", (event) => {
 
+    boardWP = [
+        ['B', 'BN', 'UF', 'X'],
+        ['BF', 'X', 'X', 'X'],
+        ['X', 'O', 'X', 'X'],
+        ['RN', 'R', 'X', 'O'],
+    ];
 
+    rotationValues = [
+        [90, 90, 0, 0],
+        [90, 0, 0, 0],
+        [0, 0, 0, 0],
+        [-90, -90, 0, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//JUNIOR
+//LEVEL1
+document.querySelector('.junior li:nth-child(1)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['X', 'X', 'UF', 'X'],
+        ['O', 'X', 'X', 'X'],
+        ['X', 'Y', 'GN', 'X'],
+        ['YF', 'YN', 'G', 'O'],
+    ];
+
+    rotationValues = [
+        [0, 0, 0, 0],
+        [00, 0, 0, 0],
+        [0, -180, 0, 0],
+        [-180, -180, 0, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//LEVEL2
+document.querySelector('.junior li:nth-child(2)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['X', 'X', 'R', 'RN'],
+        ['O', 'X', 'Y', 'YN'],
+        ['X', 'B', 'BN', 'YF'],
+        ['X', 'BF', 'X', 'O'],
+    ];
+
+    rotationValues = [
+        [0, 0, 90, 90],
+        [00, 0, 90, 90],
+        [0, 90, 90, 90],
+        [0, 90, 0, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//LEVEL3
+document.querySelector('.junior li:nth-child(3)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['X', 'X', 'O', 'X'],
+        ['O', 'X', 'X', 'X'],
+        ['R', 'UF', 'BF', 'X'],
+        ['RN', 'BN', 'B', 'O'],
+    ];
+
+    rotationValues = [
+        [0, 0, 0, 0],
+        [00, 0, 90, 0],
+        [180, 0, -90, 0],
+        [180, -90, -90, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//EXPERT
+//LEVEL1
+document.querySelector('.expert li:nth-child(1)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['GN', 'X', 'BF', 'B'],
+        ['G', 'RN', 'R', 'BN'],
+        ['X', 'O', 'YN', 'YF'],
+        ['X', 'X', 'Y', 'O'],
+    ];
+
+    rotationValues = [
+        [0, 0, 180, 180],
+        [0, -90, -90, 180],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//LEVEL2
+document.querySelector('.expert li:nth-child(2)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['G', 'GN', 'O', 'X'],
+        ['O', 'BF', 'RN', 'R'],
+        ['BN', 'B', 'YF', 'X'],
+        ['X', 'X', 'YN', 'Y'],
+    ];
+
+    rotationValues = [
+        [90, 90, 0, 0],
+        [0, -90, -90, -90],
+        [-90, -90, -90, 0],
+        [0, 0, -90, -90],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//LEVEL3
+document.querySelector('.expert li:nth-child(3)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['GN', 'R', 'YF', 'X'],
+        ['G', 'RN', 'YN', 'Y'],
+        ['X', 'O', 'X', 'BF'],
+        ['X', 'X', 'BN', 'B'],
+    ];
+
+    rotationValues = [
+        [0, 180, -90, 0],
+        [0, 180, -90, -90],
+        [0, 0, 0, -90],
+        [0, 0, -90, -90],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//MASTER
+//LEVEL1
+document.querySelector('.master li:nth-child(1)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['X', 'GN', 'O', 'Y'],
+        ['O', 'G', 'YF', 'YN'],
+        ['X', 'BF', 'R', 'X'],
+        ['BN', 'B', 'RN', 'O'],
+    ];
+
+    rotationValues = [
+        [0, 0, 0, 180],
+        [0, 0, 180, 180],
+        [0, -90, 180, 0],
+        [-90, -90, 180, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//LEVEL2
+document.querySelector('.master li:nth-child(2)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['X', 'BN', 'G', 'GN'],
+        ['R', 'B', 'BF', 'X'],
+        ['RN', 'Y', 'YN', 'X'],
+        ['X', 'X', 'YF', 'O'],
+    ];
+
+    rotationValues = [
+        [0, 0, 90, 90],
+        [180, 0, 0, 0],
+        [180, 90, 90, 0],
+        [0, 0, 90, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//LEVEL3
+document.querySelector('.master li:nth-child(3)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['YN', 'YF', 'B', 'BN'],
+        ['Y', 'X', 'BF', 'GN'],
+        ['X', 'R', 'RN', 'G'],
+        ['X', 'X', 'X', 'O'],
+    ];
+
+    rotationValues = [
+        [0, 0, 90, 90],
+        [0, 0, 90, 0],
+        [0, 90, 90, 0],
+        [0, 0, 0, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//WIZARD
+//LEVEL1
+document.querySelector('.wizard li:nth-child(1)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['X', 'X', 'O', 'GN'],
+        ['O', 'R', 'RN', 'G'],
+        ['YN', 'YF', 'B', 'BN'],
+        ['Y', 'X', 'BF', 'O'],
+    ];
+
+    rotationValues = [
+        [0, 0, 0, 0],
+        [0, 90, 90, 0],
+        [0, 0, 90, 90],
+        [0, 0, 90, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//LEVEL2
+document.querySelector('.wizard li:nth-child(2)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['G', 'GN', 'BF', 'R'],
+        ['O', 'BN', 'B', 'RN'],
+        ['X', 'O', 'YN', 'YF'],
+        ['X', 'X', 'Y', 'O'],
+    ];
+
+    rotationValues = [
+        [90, 90, -90, 180],
+        [0, -90, -90, 180],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
+
+//LEVEL3
+document.querySelector('.wizard li:nth-child(3)').addEventListener("click", (event) => {
+
+    boardWP = [
+        ['X', 'BN', 'O', 'X'],
+        ['O', 'B', 'BF', 'R'],
+        ['GN', 'G', 'YF', 'RN'],
+        ['X', 'X', 'YN', 'Y'],
+    ];
+
+    rotationValues = [
+        [0, 0, 0, 0],
+        [0, 0, 0, 180],
+        [-90, -90, -90, 180],
+        [0, 0, -90, -90],
+    ];
+
+    time = 0;
+    revertBoardToDefault();
+    refreshBoardImg();
+});
 
 
 //INITIALIZE BOARD ARRAYS NEEDED FOR THE GAME TO FUNCTION( default values, level values, temporary storage arrays )
