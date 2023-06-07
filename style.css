@@ -1,4 +1,3 @@
-
 /***GENERAL STUFF***/
 body {
 
@@ -32,7 +31,73 @@ button {
 
 }
 
+/*********************STARTSCREEN SECTION*********************/
 
+#backgroundImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/pieces/BOARD/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+  }
+
+#pageContent {
+    display: none;
+    z-index: 1;
+}
+#startContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+    background-color: #0099dd;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    border: 1rem white solid;
+    border-radius: 8rem;
+  }
+  
+#textContainer {
+
+    text-align: center;
+  }
+
+  .welcomeText {
+    font-size: 5rem;
+    color: white;
+  }
+
+#startButton {
+    border: 2px rgb(217, 227, 255) solid;
+    border-radius: 1rem;
+    color: rgb(237, 251, 255);
+    background-color: rgb(0, 84, 133);
+    font-weight: bold;
+    transform: scale(3);
+}
+
+@media (max-width: 40rem) {
+    .welcomeText {
+     font-size: 3rem;
+    }
+    #startButton{
+        transform: scale(2);
+    }
+  }
+
+
+
+/*********************STARTSCREEN END*********************/
 
 
 
@@ -324,7 +389,7 @@ button.tutorial_button{
         font-size: 4vw;
         /*height: 5vw;*/
         /*width: 26vh;*/
-        rotate: -90deg;
+        transform : rotate(90deg);
     }
     /*********************VERTICAL BAR WITH TEXT-END*********************/
 
