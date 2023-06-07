@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Slide Puzzle</title>
-        <link rel="stylesheet" href="./style.css">
-        <script defer src="script.js"></script>
-        <script defer src="timer.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Puzzle</title>
+            <link rel="stylesheet" href="./style.css">
+    <script defer src="script.js"></script>
+    <script defer src="timer.js"></script>
+</head>
 
-    <body>
-    <section class="tutSec">
+<body>
+
+
         <dialog id="tutorialDialog">
             <div class="tutoriallist">
                 <h1>How to play</h1>
                 <ul>
                     <li>Select the level you want to play</li>
-                    <li>click on the squirrels to select them now you can use the arrows on screen or on your keyboard to move the squirrels</li>
-                    <li>you win when all squirrels have dropped their nuts in a hole</li>
+                    <li>click on a squirrel to select them, now you can use the arrows on screen or on your keyboard to
+                        move the squirrels
+                    </li>
+                    <li>you win when all squirrels have dropped their nut in a hole</li>
                 </ul>
                 <button onclick="tutorialDialog.close()">Close</button>
             </div>
         </dialog>
 
-    </section>
+
+
     <section class="border">
         <span class="difcolbrdr" id="vertical_bar"></span>
         <span class="difcolbrdr" id="horizonatal_bar"></span>
+
         <div class="dificulty">
             <h1 class="starter">Starter</h1>
-            <h1 class="junior" style="display: none" >Junior</h1>
-            <h1 class="expert"  style="display: none"   >Expert</h1>
-            <h1 class="master" style="display: none"  >Master</h1>
-            <h1 class="wizard" style="display: none"  >Wizard</h1>
+            <h1 class="junior" style="display: none">Junior</h1>
+            <h1 class="expert" style="display: none">Expert</h1>
+            <h1 class="master" style="display: none">Master</h1>
+            <h1 class="wizard" style="display: none">Wizard</h1>
         </div>
     </section>
-            <section class="levels">
+
+    <section id="game">
+
+        <section class="levels">
             <h1>Levels:</h1>
             <nav>
                 <ul class="starter">
@@ -43,44 +51,62 @@
                     <li><button>Level 2</button></li>
                     <li><button>Level 3</button></li>
                 </ul>
-                <ul class="junior" >
+                <ul class="junior">
                     <li><button>Level 1</button></li>
                     <li><button>Level 2</button></li>
                     <li><button>Level 3</button></li>
                 </ul>
-                <ul class="expert" >
+                <ul class="expert">
                     <li><button>Level 1</button></li>
                     <li><button>Level 2</button></li>
                     <li><button>Level 3</button></li>
                 </ul>
-                <ul class="master" >
+                <ul class="master">
                     <li><button>Level 1</button></li>
                     <li><button>Level 2</button></li>
                     <li><button>Level 3</button></li>
                 </ul>
-                <ul class="wizard" >
+                <ul class="wizard">
                     <li><button>Level 1</button></li>
                     <li><button>Level 2</button></li>
                     <li><button>Level 3</button></li>
                 </ul>
             </nav>
         </section>
+
+
         <section class="game">
 
-            <div class="boardborder4"><div class="boardborder3"><div class="boardborder2"><div class="boardborder1"><div id="board"></div></div></div> </div></div>
+            <div class="boardborder4">
+                <div class="boardborder3">
+                    <div class="boardborder2">
+                        <div class="boardborder1">
+                            <div id="board"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
             <div class="control">
+
                 <div class="timer">
+
                     <p id="countdown">0:00</p>
+
                     <button onclick="location.reload()">
-<!--                        <img src="https://cdn0.iconfinder.com/data/icons/glyphpack/41/refresh-512.png" alt="Reload" class="refresh">-->
+                        <!--<img src="https://cdn0.iconfinder.com/data/icons/glyphpack/41/refresh-512.png" alt="Reload" class="refresh">-->
                         Restart
                     </button>
+
                 </div>
+
 
                 <div class="arrowControl">
                     <!--right is the default orientation of the arrow-->
                     <button class="arrRight" id="arrRightid"><img src="./arrows/right.png" alt="arrow right"></button>
+
                     <div class="flexarrow">
                         <button class="arrUp" id="arrUpid"><img src="./arrows/up.png" alt="arrow up"></button>
                         <button class="arrDown" id="arrDownid"><img src="./arrows/down.png" alt="arrow down"></button>
@@ -88,11 +114,19 @@
 
                     <button class="arrLeft" id="arrLeftid"><img src="./arrows/left.png" alt="arrow left"></button>
                 </div>
+
+
             </div>
 
-        </section>
-        <footer>
-           <button onclick="tutorialDialog.showModal()" class="tutorial_button">How to play?</button>
-        </footer>
-    </body>
+    </section>
+
+
+    <footer>
+        <button onclick="tutorialDialog.showModal()" class="tutorial_button">How to play?</button>
+    </footer>
+
+</body>
+
+
+
 </html>
