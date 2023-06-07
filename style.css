@@ -133,6 +133,9 @@ button {
 
 
 /*********************LEVELS*********************/
+.levels h1{
+    color: #000000;
+}
 .levels li button{
     border-radius: .5rem;
 }
@@ -154,21 +157,21 @@ button {
     background-color: #cb1f2d;
     border: #81131d solid 2px;
     margin-inline: .1rem;
-    color: #d0d0d0;
+    color: #ffffff;
 }
 
 .master li button, h1.master {
     background-color: #6d2e78;
     border: #431d4b solid 2px;
     margin-inline: .1rem;
-    color: #d9d9d9;
+    color: #ffffff;
 }
 
 .wizard li button, h1.wizard {
     background-color: #065d9c;
     border: #04395e solid 2px;
     margin-inline: .1rem;
-    color: #fff;
+    color: #ffffff;
 }
 /*********************LEVELS-END*********************/
 

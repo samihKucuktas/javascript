@@ -552,24 +552,28 @@ function loadimage(element, i, j) {
                 'src',
                 './pieces/BOARD/X.png'
             );
+            element.setAttribute('alt', 'default board piece');
             break;
         case 'O':
             element.setAttribute(
                 'src',
                 './pieces/BOARD/O.png'
             );
+            element.setAttribute('alt', 'hole piece');
             break;
         case 'FO':
             element.setAttribute(
                 'src',
                 './pieces/BOARD/FO.png'
             );
+            element.setAttribute('alt', 'filled hole piece');
             break;
         case 'UF':
             element.setAttribute(
                 'src',
                 './pieces/BOARD/UF.png'
             );
+            element.setAttribute('alt', 'unmoveable flower piece');
             break;
         //NOT_SELECTED GREY SQUIRREL
         case 'G':
@@ -577,18 +581,21 @@ function loadimage(element, i, j) {
                 'src',
                 './pieces/UP/NOT_SELECTED/GREY/G.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'GN':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/GREY/GN.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'GNN':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/GREY/GNN.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         //SELECTED GREY SQUIRREL
         case 'GS':
@@ -596,18 +603,21 @@ function loadimage(element, i, j) {
                 'src',
                 './pieces/UP/SELECTED/GREY/GS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'GNS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/GREY/GNS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'GNNS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/GREY/GNNS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         //NOT_SELECTED RED SQUIRREL
         case 'R':
@@ -615,18 +625,21 @@ function loadimage(element, i, j) {
                 'src',
                 './pieces/UP/NOT_SELECTED/RED/R.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'RN':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/RED/RN.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'RNN':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/RED/RNN.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         //SELECTED RED SQUIRREL
         case 'RS':
@@ -634,18 +647,21 @@ function loadimage(element, i, j) {
                 'src',
                 './pieces/UP/SELECTED/RED/RS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'RNS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/RED/RNS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'RNNS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/RED/RNNS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         //NOT_SELECTED YELLOW SQUIRREL
         case 'Y':
@@ -653,24 +669,28 @@ function loadimage(element, i, j) {
                 'src',
                 './pieces/UP/NOT_SELECTED/YELLOW/Y.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'YF':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/YELLOW/YF.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'YN':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/YELLOW/YN.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'YNN':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/YELLOW/YNN.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         //SELECTED YELLOW SQUIRREL
         case 'YS':
@@ -678,24 +698,28 @@ function loadimage(element, i, j) {
                 'src',
                 './pieces/UP/SELECTED/YELLOW/YS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'YFS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/YELLOW/YFS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'YNS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/YELLOW/YNS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'YNNS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/YELLOW/YNNS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         //NOT_SELECTED BLACK SQUIRREL
         case 'B':
@@ -703,24 +727,28 @@ function loadimage(element, i, j) {
                 'src',
                 './pieces/UP/NOT_SELECTED/BLACK/B.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'BF':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/BLACK/BF.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'BN':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/BLACK/BN.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'BNN':
             element.setAttribute(
                 'src',
                 './pieces/UP/NOT_SELECTED/BLACK/BNN.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         //SELECTED BLACK SQUIRREL
         case 'BS':
@@ -728,24 +756,28 @@ function loadimage(element, i, j) {
                 'src',
                 './pieces/UP/SELECTED/BLACK/BS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'BFS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/BLACK/BFS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'BNS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/BLACK/BNS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
         case 'BNNS':
             element.setAttribute(
                 'src',
                 './pieces/UP/SELECTED/BLACK/BNNS.PNG'
             );
+            element.setAttribute('alt', 'squirrel piece');
             break;
     }
 }
