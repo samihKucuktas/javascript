@@ -10,8 +10,6 @@ let rotationValues;
 //LEVEL1
 document.querySelector('.starter li:nth-child(1)').addEventListener("click", (event) => {
 
-
-
     boardWP = [
         ['X', 'X', 'O', 'X'],
         ['O', 'RN', 'R', 'X'],
@@ -26,9 +24,7 @@ document.querySelector('.starter li:nth-child(1)').addEventListener("click", (ev
         [0, 0, 0, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#95b241","Starter");
 });
 
 //LEVEL2
@@ -48,9 +44,7 @@ document.querySelector('.starter li:nth-child(2)').addEventListener("click", (ev
         [0, 0, 0, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#95b241","Starter");
 });
 
 //LEVEL3 
@@ -70,9 +64,7 @@ document.querySelector('.starter li:nth-child(3)').addEventListener("click", (ev
         [-90, -90, 0, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#95b241","Starter");
 });
 
 //JUNIOR
@@ -88,14 +80,12 @@ document.querySelector('.junior li:nth-child(1)').addEventListener("click", (eve
 
     rotationValues = [
         [0, 0, 0, 0],
-        [00, 0, 0, 0],
+        [0, 0, 0, 0],
         [0, -180, 0, 0],
         [-180, -180, 0, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#cbb649","Junior");
 });
 
 //LEVEL2
@@ -110,14 +100,12 @@ document.querySelector('.junior li:nth-child(2)').addEventListener("click", (eve
 
     rotationValues = [
         [0, 0, 90, 90],
-        [00, 0, 90, 90],
+        [0, 0, 90, 90],
         [0, 90, 90, 90],
         [0, 90, 0, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#cbb649","Junior");
 });
 
 //LEVEL3
@@ -132,14 +120,12 @@ document.querySelector('.junior li:nth-child(3)').addEventListener("click", (eve
 
     rotationValues = [
         [0, 0, 0, 0],
-        [00, 0, 90, 0],
+        [0, 0, 90, 0],
         [180, 0, -90, 0],
         [180, -90, -90, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#cbb649","Junior");
 });
 
 //EXPERT
@@ -160,9 +146,7 @@ document.querySelector('.expert li:nth-child(1)').addEventListener("click", (eve
         [0, 0, 0, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#cb1f2d","Expert");
 });
 
 //LEVEL2
@@ -182,9 +166,7 @@ document.querySelector('.expert li:nth-child(2)').addEventListener("click", (eve
         [0, 0, -90, -90],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#cb1f2d","Expert");
 });
 
 //LEVEL3
@@ -204,9 +186,7 @@ document.querySelector('.expert li:nth-child(3)').addEventListener("click", (eve
         [0, 0, -90, -90],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#cb1f2d","Expert");
 });
 
 //MASTER
@@ -227,9 +207,7 @@ document.querySelector('.master li:nth-child(1)').addEventListener("click", (eve
         [-90, -90, 180, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#6d2e78","Master");
 });
 
 //LEVEL2
@@ -249,9 +227,7 @@ document.querySelector('.master li:nth-child(2)').addEventListener("click", (eve
         [0, 0, 90, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#6d2e78","Master");
 });
 
 //LEVEL3
@@ -271,9 +247,7 @@ document.querySelector('.master li:nth-child(3)').addEventListener("click", (eve
         [0, 0, 0, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#6d2e78","Master");
 });
 
 //WIZARD
@@ -294,9 +268,7 @@ document.querySelector('.wizard li:nth-child(1)').addEventListener("click", (eve
         [0, 0, 90, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#065d9c","Wizard");
 });
 
 //LEVEL2
@@ -316,9 +288,7 @@ document.querySelector('.wizard li:nth-child(2)').addEventListener("click", (eve
         [0, 0, 0, 0],
     ];
 
-    time = 0;
-    revertBoardToDefault();
-    refreshBoardImg();
+    levelChange("#065d9c","Wizard");
 });
 
 //LEVEL3
@@ -338,10 +308,21 @@ document.querySelector('.wizard li:nth-child(3)').addEventListener("click", (eve
         [0, 0, -90, -90],
     ];
 
+    levelChange("#065d9c","Wizard");
+});
+
+
+let levelChange = function(color,level){
+    document.querySelector('#vertical_bar').style.backgroundColor = color
+    document.querySelector('#horizonatal_bar').style.backgroundColor = color
+    document.querySelector('.dificulty h1').style.backgroundColor = color
+    document.querySelector('.dificulty h1').innerHTML = level
+
     time = 0;
+    givealert = true;
     revertBoardToDefault();
     refreshBoardImg();
-});
+}
 
 
 //INITIALIZE BOARD ARRAYS NEEDED FOR THE GAME TO FUNCTION( default values, level values, temporary storage arrays )
@@ -439,15 +420,9 @@ XXXS = SELECTED_PIECE
 //RENDER FULL BOARD IN HTML, CREATES ALL THE IMAGE ELEMENTS AND FILLS THEM WITH THE RIGHT SRC IMAGE ACCORDING TO boardWP
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//render full board in html
-for (let i = 0; i < boardWP.length; i++) {
-    for (let j = 0; j < boardWP[i].length; j++) {
-        addBoard('B' + i + '-' + j, i, j);
-    }
-}
 
 //adds a img to src HTML with link
-function addBoard(id, i, j) {
+let addBoard =function(id, i, j) {
     let Img = document.createElement('img');
 
 
@@ -461,7 +436,12 @@ function addBoard(id, i, j) {
 }
 
 
-
+//render full board in html
+for (let i = 0; i < boardWP.length; i++) {
+    for (let j = 0; j < boardWP[i].length; j++) {
+        addBoard('B' + i + '-' + j, i, j);
+    }
+}
 
 
 //INITIALIZE THE EVENT LISTENERS FOR THE ARROW KEYS AND ON SCREEN ARROWS
@@ -559,7 +539,7 @@ for (let i = 0; i < boardWP.length; i++) {
                 }
 
             }
-            // testWriteBoard();
+
             refreshBoardImg();
 
         });
@@ -574,7 +554,7 @@ for (let i = 0; i < boardWP.length; i++) {
 //ALSO CHECK IF PLAYER HAS WON
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function Movement() {
+let Movement = function() {
     let i = currentClicked.charAt(0);
     let j = currentClicked.charAt(1);
 
@@ -764,7 +744,7 @@ function Movement() {
 }
 
 //helper function to check if player has won
-function checkWin() {
+let checkWin = function() {
     let totalNs = 0;
 
     for (let i = 0; i < boardWP.length; i++) {
@@ -785,7 +765,7 @@ function checkWin() {
 }
 
 //helper function to revert boards to previous state
-function revertBoards() {
+let revertBoards = function() {
 
     //boardWP = boardWPTemp
     //board = boardTemp
@@ -801,7 +781,7 @@ function revertBoards() {
 }
 
 //helper function to remove filled holes from the default board
-function revertBoardToDefault(){
+let revertBoardToDefault = function(){
     board = [
         ['X', 'X', 'O', 'X'],
         ['O', 'X', 'X', 'X'],
@@ -812,7 +792,7 @@ function revertBoardToDefault(){
 
 
 //helper function that refreshes the board by keeping the img elements and only changing the src link
-function refreshBoardImg() {
+let refreshBoardImg = function() {
     for (let i = 0; i < boardWP.length; i++) {
         for (let j = 0; j < boardWP[i].length; j++) {
             const element = document.querySelector('#B' + i + '-' + j);
@@ -1069,13 +1049,3 @@ function loadimage(element, i, j) {
             break;
     }
 }
-
-
-
-
-
-// function testWriteBoard() {
-//     for (let i = 0; i < boardWP.length; i++) {
-//         console.log(boardWP[i]);
-//     }
-// }
